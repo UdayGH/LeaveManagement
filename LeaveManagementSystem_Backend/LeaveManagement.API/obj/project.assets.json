@@ -33,6 +33,57 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "LeaveManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "LeaveManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LeaveManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeaveManagement.Application.dll": {}
+        }
+      },
+      "LeaveManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/LeaveManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeaveManagement.Domain.dll": {}
+        }
+      },
+      "LeaveManagement.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "LeaveManagement.Application": "1.0.0",
+          "LeaveManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LeaveManagement.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeaveManagement.Infrastructure.dll": {}
+        }
+      },
+      "LeaveManagement.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "LeaveManagement.Application": "1.0.0",
+          "LeaveManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LeaveManagement.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeaveManagement.Persistence.dll": {}
+        }
       }
     }
   },
@@ -67,10 +118,33 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "LeaveManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../LeaveManagement.Application/LeaveManagement.Application.csproj",
+      "msbuildProject": "../LeaveManagement.Application/LeaveManagement.Application.csproj"
+    },
+    "LeaveManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../LeaveManagement.Domain/LeaveManagement.Domain.csproj",
+      "msbuildProject": "../LeaveManagement.Domain/LeaveManagement.Domain.csproj"
+    },
+    "LeaveManagement.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../LeaveManagement.Infrastructure/LeaveManagement.Infrastructure.csproj",
+      "msbuildProject": "../LeaveManagement.Infrastructure/LeaveManagement.Infrastructure.csproj"
+    },
+    "LeaveManagement.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../LeaveManagement.Persistence/LeaveManagement.Persistence.csproj",
+      "msbuildProject": "../LeaveManagement.Persistence/LeaveManagement.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "LeaveManagement.Application >= 1.0.0",
+      "LeaveManagement.Infrastructure >= 1.0.0",
+      "LeaveManagement.Persistence >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.1"
     ]
   },
@@ -105,7 +179,17 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Application\\LeaveManagement.Application.csproj": {
+              "projectPath": "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Application\\LeaveManagement.Application.csproj"
+            },
+            "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Infrastructure\\LeaveManagement.Infrastructure.csproj": {
+              "projectPath": "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Infrastructure\\LeaveManagement.Infrastructure.csproj"
+            },
+            "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Persistence\\LeaveManagement.Persistence.csproj": {
+              "projectPath": "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Persistence\\LeaveManagement.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

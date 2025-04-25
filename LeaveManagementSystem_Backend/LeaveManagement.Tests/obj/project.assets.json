@@ -411,6 +411,29 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "LeaveManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "LeaveManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LeaveManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeaveManagement.Application.dll": {}
+        }
+      },
+      "LeaveManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/LeaveManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeaveManagement.Domain.dll": {}
+        }
       }
     }
   },
@@ -932,10 +955,21 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "LeaveManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../LeaveManagement.Application/LeaveManagement.Application.csproj",
+      "msbuildProject": "../LeaveManagement.Application/LeaveManagement.Application.csproj"
+    },
+    "LeaveManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../LeaveManagement.Domain/LeaveManagement.Domain.csproj",
+      "msbuildProject": "../LeaveManagement.Domain/LeaveManagement.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "LeaveManagement.Application >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -973,7 +1007,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Application\\LeaveManagement.Application.csproj": {
+              "projectPath": "F:\\LeaveManagementSystem_Project\\LeaveManagementSystem_Backend\\LeaveManagement.Application\\LeaveManagement.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
